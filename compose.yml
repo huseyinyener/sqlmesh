@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: sqlmesh
+      POSTGRES_PASSWORD: sqlmesh
+      POSTGRES_DB: sqlmesh
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+  sqlmesh:
+    build: .
+    container_name: sqlmesh_container
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: sqlmesh
+      DB_PASSWORD: sqlmesh
+      DB_NAME: sqlmesh
+    ports:
+      - "8000:8000"
