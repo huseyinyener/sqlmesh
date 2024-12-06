@@ -1,5 +1,5 @@
 # Setup guide
-merhaba
+commit appten geldi
 ## DuckDB CLI
 
 **Install duckdb CLI (on MacOS)**
