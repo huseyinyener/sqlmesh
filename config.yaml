@@ -1,7 +1,3 @@
-# The gateways key takes dictionaries as values,
-# and each gateway dictionary contains one or more connection dictionaries.
-# Gateway dictionaries can contain multiple connection dictionaries if different SQLMesh components
-# should use different connections (e.g., SQLMesh tests should run in a different database than SQLMesh plans).
 gateways:
   local:
     connection:
@@ -21,3 +17,11 @@ default_gateway: local
 # Model specific configuration like table format, SQL dialect, start date for backfill etc.
 model_defaults:
   dialect: spark2
+
+# Git configuration for syncing models and configurations
+git:
+  enabled: true                    # Enable Git integration
+  repo_url: git@github.com:huseyinyener/sqlmesh.git # Git repository URL (use SSH for secure access)
+  branch: main                     # Branch to pull from
+  pull_frequency: interval           # Options: manual or interval (e.g., every 5m, every 1h)
+  sync_on_startup: true            # Whether to sync on startup automatically
