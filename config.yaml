@@ -17,11 +17,3 @@ default_gateway: local
 # Model specific configuration like table format, SQL dialect, start date for backfill etc.
 model_defaults:
   dialect: spark2
-
-# Git configuration for syncing models and configurations
-git:
-  enabled: true                    # Enable Git integration
-  repo_url: git@github.com:huseyinyener/sqlmesh.git # Git repository URL (use SSH for secure access)
-  branch: main                     # Branch to pull from
-  pull_frequency: interval           # Options: manual or interval (e.g., every 5m, every 1h)
-  sync_on_startup: true            # Whether to sync on startup automatically
