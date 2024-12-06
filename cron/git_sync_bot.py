@@ -34,7 +34,7 @@ def git_pull():
 
 def start_bot():
     # Schedule: Her 5 dakikada bir git_pull çalıştır
-    schedule.every(5).minutes.do(git_pull)
+    schedule.every(1).minutes.do(git_pull)
 
     print("Git Sync Bot is running... Press Ctrl+C to stop.")
     while True:
