@@ -1,5 +1,5 @@
 # Setup guide
-ss
+deneme
 ## DuckDB CLI
 
 **Install duckdb CLI (on MacOS)**
