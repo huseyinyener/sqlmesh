@@ -4,7 +4,7 @@ from git import Repo
 import schedule
 
 # Git deposunun yolu (local)
-REPO_PATH = "../app"
+REPO_PATH = "/app"
 
 # Git URL (SSH kullanıyorsanız)
 REMOTE_URL = "git@github.com:huseyinyener/sqlmesh.git"
